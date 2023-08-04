@@ -17,4 +17,14 @@ public class CollectionService {
     public List<Collection> getAll() {
         return this.collectionRepository.findAll();
     }
+
+    /**/
+    public Collection save(Collection collection) {
+        return this.collectionRepository.save(collection);
+    }
+
+    /**/
+    public Collection byId(Integer id) {
+        return this.collectionRepository.findById(id).orElse(null);
+    }
 }
