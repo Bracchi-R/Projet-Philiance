@@ -5,5 +5,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class CollectionRepository extends JpaRepository<Collection, Integer> {
+public interface CollectionRepository extends JpaRepository<Collection, Integer> {
+    // Vous pouvez ajouter des méthodes spécifiques si nécessaire
 }
