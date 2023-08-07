@@ -28,4 +28,9 @@ public class CollectionController {
     public Collection collectionById(@PathVariable Integer idCollection) {
         return this.collectionService.byId(idCollection);
     }
+
+    @DeleteMapping("/collection/{idCollection}")
+    public void deleteCollection(@PathVariable Integer idCollection) {
+        this.collectionService.deleteById(idCollection);
+    }
 }

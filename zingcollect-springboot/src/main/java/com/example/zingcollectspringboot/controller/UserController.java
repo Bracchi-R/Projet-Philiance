@@ -28,4 +28,9 @@ public class UserController {
     public  User userById(@PathVariable Integer idUser) {
         return this.userService.byId(idUser);
     }
+
+    @DeleteMapping("/user/{idUser}")
+    public void deleteUser(@PathVariable Integer idUser) {
+        this.userService.deleteById(idUser);
+    }
 }

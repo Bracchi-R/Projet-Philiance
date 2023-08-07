@@ -28,4 +28,9 @@ public class ObjetController {
     public Objet objetById(@PathVariable Integer idObjet) {
         return this.objetService.byId(idObjet);
     }
+
+    @DeleteMapping("/objet/{idObjet}")
+    public void deleteObjet(@PathVariable Integer idObjet) {
+        this.objetService.deleteById(idObjet);
+    }
 }
