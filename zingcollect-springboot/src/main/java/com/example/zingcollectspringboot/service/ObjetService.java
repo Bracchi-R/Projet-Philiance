@@ -16,4 +16,14 @@ public class ObjetService {
     public List<Objet> getAll() {
         return this.objetRepository.findAll();
     }
+
+    /**/
+    public Objet save(Objet objet) {
+        return this.objetRepository.save(objet);
+    }
+
+    /**/
+    public Objet byId(Integer id) {
+        return this.objetRepository.findById(id).orElse(null);
+    }
 }

@@ -16,4 +16,14 @@ public class UserService {
     public List<User> getAll() {
         return this.userRepository.findAll();
     }
+
+    /**/
+    public User save(User user) {
+        return this.userRepository.save(user);
+    }
+
+    /**/
+    public User byId(Integer id) {
+        return this.userRepository.findById(id).orElse(null);
+    }
 }

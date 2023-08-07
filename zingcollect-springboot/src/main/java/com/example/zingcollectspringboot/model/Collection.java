@@ -31,4 +31,7 @@ public class Collection {
     @OneToMany(mappedBy = "idCollection")
     private Set<Objet> objets = new LinkedHashSet<>();
 
+    @Column(name = "image", nullable = false, length = 256)
+    private String image;
+
 }
