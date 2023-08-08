@@ -4,9 +4,6 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.LinkedHashSet;
-import java.util.Set;
-
 @Getter
 @Setter
 @Entity
@@ -29,13 +26,10 @@ public class User {
     @Column(name = "tel", length = 10)
     private String tel;
 
-    @Column(name = "mail", nullable = false)
+    @Column(name = "mail", nullable = false, length = 256)
     private String mail;
 
     @Column(name = "mdp", nullable = false, length = 20)
     private String mdp;
-
-    @OneToMany(mappedBy = "idUser")
-    private Set<Collection> collections = new LinkedHashSet<>();
 
 }
