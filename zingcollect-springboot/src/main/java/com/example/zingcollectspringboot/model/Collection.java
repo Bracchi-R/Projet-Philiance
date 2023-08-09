@@ -10,12 +10,12 @@ import lombok.Setter;
 @Table(name = "collection")
 public class Collection {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private Integer id;
 
-    @Column(name = "user_id")
-    private Integer userId;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id")
+    private User user;
 
     @Column(name = "nom", nullable = false, length = 256)
     private String nom;

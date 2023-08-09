@@ -12,12 +12,12 @@ import java.math.BigDecimal;
 @Table(name = "objets")
 public class Objet {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private Integer id;
 
-    @Column(name = "collection_id")
-    private Integer collectionId;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "collection_id")
+    private Collection collection;
 
     @Column(name = "nom", nullable = false, length = 256)
     private String nom;

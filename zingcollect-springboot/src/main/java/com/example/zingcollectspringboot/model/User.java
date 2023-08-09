@@ -1,11 +1,11 @@
 package com.example.zingcollectspringboot.model;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
-
-import java.util.LinkedHashSet;
-import java.util.Set;
 
 @Getter
 @Setter
@@ -13,7 +13,6 @@ import java.util.Set;
 @Table(name = "users")
 public class User {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private Integer id;
 
@@ -26,15 +25,13 @@ public class User {
     @Column(name = "prenom", nullable = false, length = 256)
     private String prenom;
 
-    @Column(name = "tel", length = 10)
+    @Column(name = "tel", length = 20)
     private String tel;
 
     @Column(name = "mail", nullable = false, length = 256)
     private String mail;
 
-    @Column(name = "mdp", nullable = false, length = 20)
+    @Column(name = "mdp", nullable = false, length = 256)
     private String mdp;
-
-
 
 }
