@@ -12,6 +12,7 @@ import java.math.BigDecimal;
 @Table(name = "objets")
 public class Objet {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private Integer id;
 
@@ -29,14 +30,14 @@ public class Objet {
     private String marque;
 
     @Lob
-    @Column(name = "etat")
-    private String etat;
-
-    @Lob
     @Column(name = "description")
     private String description;
 
     @Column(name = "prix_vente", precision = 10, scale = 2)
     private BigDecimal prixVente;
+
+    @Lob
+    @Column(name = "etat")
+    private String etat;
 
 }
