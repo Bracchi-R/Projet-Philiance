@@ -36,8 +36,8 @@ public class Objet {
     @Column(name = "prix_vente", precision = 10, scale = 2)
     private BigDecimal prixVente;
 
-    @Lob
-    @Column(name = "etat")
-    private String etat;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "etat_id")
+    private Etat etat;
 
 }
