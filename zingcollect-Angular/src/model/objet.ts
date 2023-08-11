@@ -1,4 +1,4 @@
-export interface objet{
+export interface Objet{
     id : number;
     collection_id : number;
     nom : string;

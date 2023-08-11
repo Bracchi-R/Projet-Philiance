@@ -1,4 +1,4 @@
-export interface collection{
+export interface Collection{
     id : number;
     user_id :  number;
     nom : string;
