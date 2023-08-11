@@ -3,7 +3,7 @@ export interface user{
     admin : boolean;
     nom : string;
     prenom : string;
-    tel : string;
+    tel : string | null;
     mail : string;
     mdp : string;
 }

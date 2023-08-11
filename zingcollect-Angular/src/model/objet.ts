@@ -3,8 +3,8 @@ export interface objet{
     collection_id : number;
     nom : string;
     image : string;
-    marque : string;
-    description : string;
+    marque : string | null;
+    description : string | null;
     prix_vente : number;
-    etat : string
+    etat_id : number | null;
 }
