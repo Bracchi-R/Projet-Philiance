@@ -1,0 +1,14 @@
+.titre {
+    background-color: rgba(0, 0, 0, 0.2);  
+  }
+  
+  .divimg { 
+    height: 30rem;
+    width: 100%;
+    background-color: red;
+    border: 2px #aaa solid;
+  }
+
+  .color {
+    background-color: rgb(243, 243, 98);
+  }

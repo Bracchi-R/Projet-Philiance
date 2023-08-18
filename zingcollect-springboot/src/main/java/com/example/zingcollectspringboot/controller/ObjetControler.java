@@ -12,7 +12,7 @@ public class ObjetControler {
     @Autowired
     private ObjetService objetService;
 
-    @PostMapping("objet/add")
+    @PostMapping("/objet/add")
     public Objet addObjet(@RequestBody Objet objet) {
         return this.objetService.save(objet);
     }

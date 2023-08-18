@@ -1,0 +1,18 @@
+.blocDesc {
+  background-color: rgb(243, 243, 98, 0.5);
+}
+
+.desc {
+  padding: 3rem 3rem 2rem;
+ 
+  font-size: 1.5rem;
+  text-align: justify;
+}
+
+@media (max-width: 576px) {
+  .blocDesc {
+    display: none;
+  }
+}
+
+

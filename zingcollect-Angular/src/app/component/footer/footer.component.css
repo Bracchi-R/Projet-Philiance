@@ -1,0 +1,25 @@
+.logo {
+  height: 10rem;
+  width: 10rem;
+}
+img {
+  height: 150%;
+  width: 150%;
+}
+
+.face {
+  background-color: #3b5998;
+}
+
+.twitter {
+  background-color: #55acee;
+}
+.insta {
+  background-color: #ac2bac;
+}
+.linkedin {
+  background-color: #0082ca;
+}
+.fond {
+  background-color: rgba(0, 0, 0, 0.2);
+}

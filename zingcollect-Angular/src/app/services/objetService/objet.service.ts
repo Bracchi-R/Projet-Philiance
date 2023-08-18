@@ -8,7 +8,7 @@ import { Objet } from 'src/model/objet';
 })
 export class ObjetService {
 
-  baseURL : string = "http://localhost:8000";
+  baseURL : string = "http://localhost:8080";
 
   constructor(private http:HttpClient) { }
 
@@ -21,10 +21,10 @@ export class ObjetService {
   }
 
   public getObjetById(idObjet : number): Observable<Objet> {
-    return this.http.get<Objet>(this.baseURL + "/objet/{idObjet}");
+    return this.http.get<Objet>(this.baseURL + "/objet/" + idObjet);
   }
 
   public deleteObjet(idObjet : number): Observable<Objet>{
-    return this.http.delete<Objet>(this.baseURL + "/objet/{idObjet}");
+    return this.http.delete<Objet>(this.baseURL + "/objet/" + idObjet);
   }
 }

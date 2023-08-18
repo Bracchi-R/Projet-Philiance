@@ -8,7 +8,7 @@ import { Collection } from 'src/model/collection';
 })
 export class CollectionService {
 
-  baseURL : string = "http://localhost:8000";
+  baseURL : string = "http://localhost:8080";
 
   constructor(private http:HttpClient) { }
 
@@ -21,10 +21,10 @@ export class CollectionService {
   }
 
   public getCollectionById(idCollection : number): Observable<Collection> {
-    return this.http.get<Collection>(this.baseURL + "/collection/{idCollection}");
+    return this.http.get<Collection>(this.baseURL + "/collection/" + idCollection);
   }
 
-  public deleteUser(idUser : number): Observable<Collection>{
-    return this.http.delete<Collection>(this.baseURL + "/collection/{idCollection}");
+  public deleteCollection(idCollection : number): Observable<Collection>{
+    return this.http.delete<Collection>(this.baseURL + "/collection/" + idCollection);
   }
 }

@@ -8,7 +8,7 @@ import { User } from 'src/model/user';
 })
 export class UserService {
 
-  baseURL : string = "http://localhost:8000";
+  baseURL : string = "http://localhost:8080";
 
   constructor(private http:HttpClient) { }
 
@@ -21,10 +21,10 @@ export class UserService {
   }
 
   public getUserById(idUser : number): Observable<User> {
-    return this.http.get<User>(this.baseURL + "/user/{idUser}");
+    return this.http.get<User>(this.baseURL + "/user/" + idUser);
   }
 
   public deleteUser(idUser : number): Observable<User>{
-    return this.http.delete<User>(this.baseURL + "/user/{idUser}");
+    return this.http.delete<User>(this.baseURL + "/user/" + idUser);
   }
 }
