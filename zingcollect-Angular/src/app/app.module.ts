@@ -9,6 +9,14 @@ import { HeaderComponent } from './component/header/header.component';
 import { MainComponent } from './component/main/main.component';
 import { CardObjetComponent } from './component/card-objet/card-objet.component';
 import { InscriptionComponent } from './component/inscription/inscription.component';
+import { ContactComponent } from './component/contact/contact.component';
+import { MesCollectionsComponent } from './component/mes-collections/mes-collections.component';
+import { LesCollectionsComponent } from './component/les-collections/les-collections.component';
+import { ConnectionComponent } from './component/connection/connection.component';
+import { ForumComponent } from './component/forum/forum.component';
+import { MaCollectionComponent } from './component/ma-collection/ma-collection.component';
+import { FormAddCollectionComponent } from './component/form-add-collection/form-add-collection.component';
+import { FormAddObjetComponent } from './component/form-add-objet/form-add-objet.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +25,15 @@ import { InscriptionComponent } from './component/inscription/inscription.compon
     HeaderComponent,
     MainComponent,
     CardObjetComponent,
-    InscriptionComponent
+    InscriptionComponent,
+    ContactComponent,
+    MesCollectionsComponent,
+    LesCollectionsComponent,
+    ConnectionComponent,
+    ForumComponent,
+    MaCollectionComponent,
+    FormAddCollectionComponent,
+    FormAddObjetComponent
   ],
   imports: [
     BrowserModule,

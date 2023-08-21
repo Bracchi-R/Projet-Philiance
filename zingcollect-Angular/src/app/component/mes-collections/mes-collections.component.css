@@ -1,0 +1,27 @@
+.titre {
+    background-color: rgba(0, 0, 0, 0.2);  
+  }
+
+  .test {
+    background-color: lightblue;
+border: 1px solid black;
+height: 100px;
+width: 500px;
+overflow-x: scroll;
+  }
+
+  .scroll {
+    max-height: 10rem;
+    overflow-y: scroll;
+  }
+
+  .divimg {
+    height: 15rem;
+    width: 100%;
+    background-color: red;
+    border: 2px #aaa solid;
+  }
+
+  .color {
+    background-color: rgb(243, 243, 98);
+  }

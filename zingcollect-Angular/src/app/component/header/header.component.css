@@ -3,16 +3,32 @@
 }
 
 .desc {
-  padding: 3rem 3rem 2rem;
- 
+  padding: 7rem 3rem 2rem;
   font-size: 1.5rem;
   text-align: justify;
 }
 
+.logoh {
+  height: 100px;
+  width: 100px;
+}
+
+.logoh img {
+  height: 100%;
+  width: 100%;
+}
+ .cont {
+  font-size: 1.7rem;
+  margin-left: 1rem;
+ }
+
+ .cont a {
+  color: white;
+ }
+
 @media (max-width: 576px) {
-  .blocDesc {
+  .sup {
     display: none;
   }
 }
-
 
