@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {HttpClientModule} from "@angular/common/http";
+import { HttpClientModule } from "@angular/common/http";
 import { FooterComponent } from './component/footer/footer.component';
 import { HeaderComponent } from './component/header/header.component';
 import { MainComponent } from './component/main/main.component';
@@ -17,6 +17,7 @@ import { ForumComponent } from './component/forum/forum.component';
 import { MaCollectionComponent } from './component/ma-collection/ma-collection.component';
 import { FormAddCollectionComponent } from './component/form-add-collection/form-add-collection.component';
 import { FormAddObjetComponent } from './component/form-add-objet/form-add-objet.component';
+import { InfoVendeurComponent } from './component/info-vendeur/info-vendeur.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { FormAddObjetComponent } from './component/form-add-objet/form-add-objet
     ForumComponent,
     MaCollectionComponent,
     FormAddCollectionComponent,
-    FormAddObjetComponent
+    FormAddObjetComponent,
+    InfoVendeurComponent
   ],
   imports: [
     BrowserModule,
