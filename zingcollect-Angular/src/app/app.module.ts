@@ -18,6 +18,8 @@ import { MaCollectionComponent } from './component/ma-collection/ma-collection.c
 import { FormAddCollectionComponent } from './component/form-add-collection/form-add-collection.component';
 import { FormAddObjetComponent } from './component/form-add-objet/form-add-objet.component';
 import { InfoVendeurComponent } from './component/info-vendeur/info-vendeur.component';
+import { TitreLesCollectionsComponent } from './component/titre-les-collections/titre-les-collections.component';
+import { TitreCardObjetComponent } from './component/titre-card-objet/titre-card-objet.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { InfoVendeurComponent } from './component/info-vendeur/info-vendeur.comp
     MaCollectionComponent,
     FormAddCollectionComponent,
     FormAddObjetComponent,
-    InfoVendeurComponent
+    InfoVendeurComponent,
+    TitreLesCollectionsComponent,
+    TitreCardObjetComponent
   ],
   imports: [
     BrowserModule,

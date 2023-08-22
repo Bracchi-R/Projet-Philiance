@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Collection } from 'src/model/collection';
 
 
 @Component({
@@ -7,6 +8,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./les-collections.component.css']
 })
 
-export class LesCollectionsComponent {
+export class LesCollectionsComponent implements OnInit {
+
+  @Input() collection : Collection | undefined;
+
+  constructor() {}
+
+  ngOnInit(): void {
+      
+  }
 
 }
