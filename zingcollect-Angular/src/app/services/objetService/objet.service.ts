@@ -27,4 +27,8 @@ export class ObjetService {
   public deleteObjet(idObjet : number): Observable<Objet>{
     return this.http.delete<Objet>(this.baseURL + "/objet/" + idObjet);
   }
+
+  public getObjetsForCollection(collectionId : number): Observable<Array<Objet>> {
+    return this.http.get<Array<Objet>>(this.baseURL + "collection/${collectionId}/objets");
+  }
 }

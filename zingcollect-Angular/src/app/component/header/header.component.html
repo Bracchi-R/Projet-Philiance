@@ -19,7 +19,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#!">Accueil</a>
+          <a routerLink="" class="nav-link active" aria-current="page" href="#!">Accueil</a>
         </li>
         <li class="nav-item"><a class="nav-link" href="#!"></a></li>
         <li class="nav-item">
@@ -33,15 +33,15 @@
               Collections
             </button>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Mes Collections</a></li>
-              <li><a class="dropdown-item" href="#">Les Collections</a></li>
+              <li><a routerLink="mes-collections" class="dropdown-item" href="#">Mes Collections</a></li>
+              <li><a routerLink="les-collections" class="dropdown-item" href="#">Les Collections</a></li>
             </ul>
           </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled" href="#!">Forum</a>
+          <a routerLink="forum" class="nav-link " href="#!">Forum</a>
         </li>
-        <li class="nav-item"><a class="nav-link" href="#!">Contact</a></li>
+        <li class="nav-item"><a routerLink="contact" class="nav-link" href="#!">Contact</a></li>
         <li class="nav-item"><a class="nav-link" href="#!">Mon compte</a></li>
         <li class="nav-item">
           <div class="dropdown">
@@ -54,8 +54,8 @@
               Connection
             </button>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Inscription</a></li>
-              <li><a class="dropdown-item" href="#">Connexion</a></li>
+              <li><a routerLink="inscription" class="dropdown-item" href="#">Inscription</a></li>
+              <li><a routerLink="connection" class="dropdown-item" href="#">Connexion</a></li>
               <li><a class="dropdown-item" href="#">Déconnection</a></li>
             </ul>
           </div>

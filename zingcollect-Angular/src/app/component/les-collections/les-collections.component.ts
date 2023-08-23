@@ -18,4 +18,6 @@ export class LesCollectionsComponent implements OnInit {
       
   }
 
+  
+
 }

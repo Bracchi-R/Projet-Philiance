@@ -31,4 +31,8 @@ public class ObjetService {
     public void deleteById(Integer id) {
         this.objetRepository.deleteById(id);
     }
+
+    public List<Objet> getObjetsForCollection(Integer collectionId) {
+        return objetRepository.findByCollectionId(collectionId);
+    }
 }

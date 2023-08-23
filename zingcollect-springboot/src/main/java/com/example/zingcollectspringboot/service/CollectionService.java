@@ -5,7 +5,9 @@ import com.example.zingcollectspringboot.repository.CollectionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 @Service
 public class CollectionService {
@@ -31,5 +33,28 @@ public class CollectionService {
     /* Cette méthode permet de supprimer un objet Collection en fonction de son identifiant */
     public void deleteById(Integer id) {
         this.collectionRepository.deleteById(id);
+    }
+
+    /* Cette méthode permet de récupérer un certain nombre de collections aléatoires */
+    public List<Collection> getCollectionsAleatoire(Integer nombre) {
+        List<Collection> allCollections = collectionRepository.findAll();
+
+        int totalCollection = allCollections.size();
+
+        if (totalCollection <= nombre) {
+            return allCollections;
+        }
+
+        List<Collection> collectionsAleatoire = new ArrayList<>();
+        Random random = new Random();
+
+        while (collectionsAleatoire.size() < nombre) {
+            Collection collectionAleatoire = allCollections.get(random.nextInt(totalCollection));
+            if (!collectionsAleatoire.contains(collectionAleatoire)) {
+                collectionsAleatoire.add(collectionAleatoire);
+            }
+        }
+
+        return collectionsAleatoire;
     }
 }

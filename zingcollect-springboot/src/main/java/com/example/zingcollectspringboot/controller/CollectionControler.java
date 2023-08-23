@@ -5,7 +5,9 @@ import com.example.zingcollectspringboot.service.CollectionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
@@ -33,6 +35,9 @@ public class CollectionControler {
         this.collectionService.deleteById((idCollection));
     }
 
-
+    @GetMapping("/collections/aleatoires/{nombre}")
+    public List<Collection> getCollectionsAleatoires(@PathVariable Integer nombre) {
+        return this.collectionService.getCollectionsAleatoire(nombre);
+    }
 
 }

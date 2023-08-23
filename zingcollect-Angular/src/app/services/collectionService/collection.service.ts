@@ -27,4 +27,9 @@ export class CollectionService {
   public deleteCollection(idCollection : number): Observable<Collection>{
     return this.http.delete<Collection>(this.baseURL + "/collection/" + idCollection);
   }
+
+  public getRandomCollections(nombre: number): Observable<Array<Collection>> {
+    return this.http.get<Array<Collection>>(this.baseURL + "/collections/aleatoires/" + nombre);
+  }
+  
 }

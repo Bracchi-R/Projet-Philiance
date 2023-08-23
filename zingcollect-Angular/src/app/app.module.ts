@@ -20,6 +20,11 @@ import { FormAddObjetComponent } from './component/form-add-objet/form-add-objet
 import { InfoVendeurComponent } from './component/info-vendeur/info-vendeur.component';
 import { TitreLesCollectionsComponent } from './component/titre-les-collections/titre-les-collections.component';
 import { TitreCardObjetComponent } from './component/titre-card-objet/titre-card-objet.component';
+import { TitreMaCollectionComponent } from './component/titre-ma-collection/titre-ma-collection.component';
+import { BlockLesCollectionComponent } from './component/block-les-collection/block-les-collection.component';
+import { BlockMaCollectionComponent } from './component/block-ma-collection/block-ma-collection.component';
+import { BlockMesCollectionsComponent } from './component/block-mes-collections/block-mes-collections.component';
+import { TitreMesCollectionsComponent } from './component/titre-mes-collections/titre-mes-collections.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +44,12 @@ import { TitreCardObjetComponent } from './component/titre-card-objet/titre-card
     FormAddObjetComponent,
     InfoVendeurComponent,
     TitreLesCollectionsComponent,
-    TitreCardObjetComponent
+    TitreCardObjetComponent,
+    TitreMaCollectionComponent,
+    BlockLesCollectionComponent,
+    BlockMaCollectionComponent,
+    BlockMesCollectionsComponent,
+    TitreMesCollectionsComponent
   ],
   imports: [
     BrowserModule,

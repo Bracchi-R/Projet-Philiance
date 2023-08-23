@@ -3,6 +3,8 @@ package com.example.zingcollectspringboot.controller;
 import com.example.zingcollectspringboot.model.Objet;
 import com.example.zingcollectspringboot.service.ObjetService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -32,4 +34,11 @@ public class ObjetControler {
     public void deleteObjet(@PathVariable Integer idObjet) {
         this.objetService.deleteById(idObjet);
     }
+
+    @GetMapping("/collection/{collectionId}/objets")
+    public ResponseEntity<List<Objet>> getObjetsForCollection(@PathVariable Integer collectionId) {
+        List<Objet> objets = objetService.getObjetsForCollection(collectionId);
+        return new ResponseEntity<>(objets, HttpStatus.OK);
+    }
+
 }

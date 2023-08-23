@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { Collection } from 'src/model/collection';
 import { CollectionService } from './services/collectionService/collection.service';
+import { ObjetService } from './services/objetService/objet.service';
+import { Objet } from 'src/model/objet';
 
 @Component({
   selector: 'app-root',
@@ -12,6 +14,7 @@ export class AppComponent {
   title = 'zingcollect-Angular';
 
   listCollection : Array<Collection> = [];
+  ListObjet : Array<Objet> = [];
 
   constructor(private collectionService : CollectionService) {
   }
@@ -25,5 +28,7 @@ export class AppComponent {
         console.error(err);
       }
     });
+
+  
   }
 }
