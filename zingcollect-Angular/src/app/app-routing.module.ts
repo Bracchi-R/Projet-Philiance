@@ -12,6 +12,7 @@ import { InfoVendeurComponent } from './component/info-vendeur/info-vendeur.comp
 import { BlockLesCollectionComponent } from './component/block-les-collection/block-les-collection.component';
 import { BlockMaCollectionComponent } from './component/block-ma-collection/block-ma-collection.component';
 import { BlockMesCollectionsComponent } from './component/block-mes-collections/block-mes-collections.component';
+import { MaCollectionComponent } from './component/ma-collection/ma-collection.component';
 
 const routes: Routes = [
   { path: '', component: MainComponent},
@@ -24,7 +25,7 @@ const routes: Routes = [
   { path: 'form-objet', component: FormAddObjetComponent},
   { path: 'info-vendeur', component: InfoVendeurComponent},
   { path: 'les-collections' ,component: BlockLesCollectionComponent},
-  { path: 'ma-collection', component: BlockMaCollectionComponent},
+  { path: 'ma-collection/:collectionId', component: BlockMaCollectionComponent },
   { path: 'mes-collections', component: BlockMesCollectionsComponent},
 
 ];

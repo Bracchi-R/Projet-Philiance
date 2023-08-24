@@ -1,15 +1,21 @@
 
-.titre {
-    background-color: rgba(0, 0, 0, 0.2);  
-  }
+
 
   .divimg {
-    height: 15rem;
+    height: 18rem;
     width: 100%;
-    background-color: red;
     border: 2px #aaa solid;
   }
 
   .color {
     background-color: rgb(243, 243, 98);
+  }
+
+  img {
+    height: 100%;
+    width: auto;
+  }
+
+  h2 {
+    font-size: 1.2rem;
   }

@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Collection } from 'src/model/collection';
+import { Objet } from 'src/model/objet';
 
 @Injectable({
   providedIn: 'root'
@@ -30,6 +31,10 @@ export class CollectionService {
 
   public getRandomCollections(nombre: number): Observable<Array<Collection>> {
     return this.http.get<Array<Collection>>(this.baseURL + "/collections/aleatoires/" + nombre);
+  }
+
+  public getObjectsForCollection(collectionId: number): Observable<Objet[]> {
+    return this.http.get<Objet[]>(this.baseURL + "/collection/" + collectionId + "/objets");
   }
   
 }
