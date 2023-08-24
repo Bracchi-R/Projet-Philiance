@@ -1,20 +1,21 @@
-<div class="container px-4 px-lg-5">
-  <!-- Call to Action-->
-  
-  <!-- Content Row-->
+<div *ngIf="selectedObject" class="container px-4 px-lg-5">
   <div class="gx-lg-5">
     <div class="mb-5">
       <div class="card">
         <div class="card-body">
           <div class="divimg">
-            <img src="" alt="" />
+            <img src="{{selectedObject.image}}" alt="" />
           </div>
           <div class="card-body">
-            <p class="card-text">L'objet est dans un état : $$$$$$$. <br>Description</p>
+            
+            <p class="card-text">L'objet est dans un état : {{selectedObject.etat_id}}. <br>{{selectedObject.description}}</p>
           </div>
         </div>
         <div class="card-footer d-flex justify-content-around">
-          <a class="color btn btn-sm" href="#!">Prix</a>
+          <button class="color btn btn-sm" href="#!">{{selectedObject.prix_vente}}</button>
+          
+          <button class="color btn btn-sm" >Retour</button>
+  
         </div>
       </div>
     </div>

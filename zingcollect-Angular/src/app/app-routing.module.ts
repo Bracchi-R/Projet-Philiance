@@ -19,7 +19,7 @@ const routes: Routes = [
   { path: 'forum', component: ForumComponent},
   { path: 'inscription', component: InscriptionComponent},
   { path: 'connection', component: ConnectionComponent},
-  { path: 'card-objet', component: CardObjetComponent},
+  { path: 'card-objet/:id', component: CardObjetComponent},
   { path: 'contact', component: ContactComponent},
   { path: 'form-collection', component: FormAddCollectionComponent},
   { path: 'form-objet', component: FormAddObjetComponent},

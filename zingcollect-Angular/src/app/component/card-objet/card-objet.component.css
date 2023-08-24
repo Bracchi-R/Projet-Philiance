@@ -1,6 +1,8 @@
+  
+
   .divimg { 
-    height: 30rem;
-    width: 100%;
+   
+    
     background-color: red;
     border: 2px #aaa solid;
   }
@@ -8,3 +10,10 @@
   .color {
     background-color: rgb(243, 243, 98);
   }
+
+  img {
+    height: 100%;
+    width: 100%;
+  }
+
+  

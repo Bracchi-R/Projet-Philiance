@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { CollectionService } from 'src/app/services/collectionService/collection.service';
 import { Collection } from 'src/model/collection';
 import { Objet } from 'src/model/objet';
@@ -10,12 +10,11 @@ import { Objet } from 'src/model/objet';
   styleUrls: ['./ma-collection.component.css']
 })
 export class MaCollectionComponent implements OnInit {
-  /* @Input() objet : Objet | undefined; */
 
   selectedCollection: Collection | undefined;
   objectsOfSelectedCollection: Objet[] = [];
 
-  constructor(private collectionService: CollectionService, private route:ActivatedRoute){}
+  constructor(private collectionService: CollectionService, private route:ActivatedRoute, private router: Router){}
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
@@ -38,6 +37,12 @@ export class MaCollectionComponent implements OnInit {
       this.objectsOfSelectedCollection = objets;
     });
   }
+
+  afficherInfos(objet: Objet): void {
+    // Rediriger vers la route 'card-objet' en passant l'ID de l'objet dans les paramètres
+    this.router.navigate(['/card-objet', objet.id]);
+  }
+  
 
   
 }
