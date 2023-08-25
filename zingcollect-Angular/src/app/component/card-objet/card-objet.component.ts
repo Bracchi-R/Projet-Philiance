@@ -28,11 +28,6 @@ export class CardObjetComponent implements OnInit{
     });
   }
 
-  retourner(): void {
-    // Revenir à la route précédente
-    this.router.navigate(['/'], { relativeTo: this.route });
-  }
-
   
 
   

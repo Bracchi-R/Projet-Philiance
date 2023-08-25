@@ -1,3 +1,5 @@
+import { Etat } from "./etat";
+
 export interface Objet{
     id : number;
     collection_id : number;
