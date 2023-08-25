@@ -4,18 +4,22 @@
       <div class="card">
         <div class="card-body">
           <div class="divimg">
-            <img src="{{selectedObject.image}}" alt="" />
+            <img src="{{ selectedObject.image }}" alt="" />
           </div>
           <div class="card-body">
-            
-            <p class="card-text">L'objet est dans un état : {{selectedObject.etat_id}}. <br>{{selectedObject.description}}</p>
+            <p class="card-text">
+              L'objet est dans un état : {{ selectedObject.etat_id }}. <br />{{
+                selectedObject.description
+              }}
+            </p>
           </div>
         </div>
         <div class="card-footer d-flex justify-content-around">
-          <button class="color btn btn-sm" href="#!">{{selectedObject.prix_vente}}</button>
-          
+          <button class="color btn btn-sm" href="#!">
+            {{ selectedObject.prix_vente }}
+          </button>
+
           <button class="color btn btn-sm" (click)="retourner()">Retour</button>
-  
         </div>
       </div>
     </div>

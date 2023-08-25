@@ -12,7 +12,6 @@ import { InfoVendeurComponent } from './component/info-vendeur/info-vendeur.comp
 import { BlockLesCollectionComponent } from './component/block-les-collection/block-les-collection.component';
 import { BlockMaCollectionComponent } from './component/block-ma-collection/block-ma-collection.component';
 import { BlockMesCollectionsComponent } from './component/block-mes-collections/block-mes-collections.component';
-import { MaCollectionComponent } from './component/ma-collection/ma-collection.component';
 import { ProfilComponent } from './component/profil/profil.component';
 import { AdminComponent } from './component/admin/admin.component';
 
