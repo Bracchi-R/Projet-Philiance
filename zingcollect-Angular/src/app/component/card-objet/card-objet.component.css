@@ -1,9 +1,6 @@
   
 
   .divimg { 
-   
-    
-    background-color: red;
     border: 2px #aaa solid;
   }
 
@@ -16,4 +13,7 @@
     width: 100%;
   }
 
+  .test {
+    margin-top: 3rem;
+  }
   

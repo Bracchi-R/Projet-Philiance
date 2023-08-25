@@ -1,4 +1,4 @@
-<div *ngIf="selectedObject" class="container px-4 px-lg-5">
+<div *ngIf="selectedObject" class="test container px-4 px-lg-5">
   <div class="gx-lg-5">
     <div class="mb-5">
       <div class="card">
@@ -14,7 +14,7 @@
         <div class="card-footer d-flex justify-content-around">
           <button class="color btn btn-sm" href="#!">{{selectedObject.prix_vente}}</button>
           
-          <button class="color btn btn-sm" >Retour</button>
+          <button class="color btn btn-sm" (click)="retourner()">Retour</button>
   
         </div>
       </div>

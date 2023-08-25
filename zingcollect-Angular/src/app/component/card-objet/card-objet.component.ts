@@ -11,6 +11,7 @@ import { Objet } from 'src/model/objet';
 export class CardObjetComponent implements OnInit{
 
   selectedObject: Objet | undefined;
+  selectedCollectionId: number | undefined;
 
 
   constructor(private route: ActivatedRoute, private objetService: ObjetService, private router : Router) {}
@@ -26,6 +27,13 @@ export class CardObjetComponent implements OnInit{
       });
     });
   }
+
+  retourner(): void {
+    // Revenir à la route précédente
+    this.router.navigate(['/'], { relativeTo: this.route });
+  }
+
+  
 
   
 
