@@ -13,12 +13,16 @@ import { BlockLesCollectionComponent } from './component/block-les-collection/bl
 import { BlockMaCollectionComponent } from './component/block-ma-collection/block-ma-collection.component';
 import { BlockMesCollectionsComponent } from './component/block-mes-collections/block-mes-collections.component';
 import { MaCollectionComponent } from './component/ma-collection/ma-collection.component';
+import { ProfilComponent } from './component/profil/profil.component';
+import { AdminComponent } from './component/admin/admin.component';
 
 const routes: Routes = [
   { path: '', component: MainComponent},
+  { path: 'admin', component: AdminComponent},
   { path: 'forum', component: ForumComponent},
   { path: 'inscription', component: InscriptionComponent},
   { path: 'connection', component: ConnectionComponent},
+  { path: 'profil', component: ProfilComponent},
   { path: 'card-objet/:id', component: CardObjetComponent},
   { path: 'contact', component: ContactComponent},
   { path: 'form-collection', component: FormAddCollectionComponent},

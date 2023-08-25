@@ -25,6 +25,8 @@ import { BlockLesCollectionComponent } from './component/block-les-collection/bl
 import { BlockMaCollectionComponent } from './component/block-ma-collection/block-ma-collection.component';
 import { BlockMesCollectionsComponent } from './component/block-mes-collections/block-mes-collections.component';
 import { TitreMesCollectionsComponent } from './component/titre-mes-collections/titre-mes-collections.component';
+import { ProfilComponent } from './component/profil/profil.component';
+import { AdminComponent } from './component/admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +51,9 @@ import { TitreMesCollectionsComponent } from './component/titre-mes-collections/
     BlockLesCollectionComponent,
     BlockMaCollectionComponent,
     BlockMesCollectionsComponent,
-    TitreMesCollectionsComponent
+    TitreMesCollectionsComponent,
+    ProfilComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,

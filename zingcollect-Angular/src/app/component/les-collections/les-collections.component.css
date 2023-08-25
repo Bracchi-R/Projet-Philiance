@@ -1,3 +1,7 @@
+  h2 {
+    font-size: 1.2rem;
+  }
+
   .scroll {
     max-height: 10rem;
     overflow-y: scroll;
@@ -6,7 +10,6 @@
   .divimg {
     height: 15rem;
     width: 100%;
-    border: 2px #aaa solid;
   }
 
   .color {
@@ -21,3 +24,5 @@
   .desc {
     height: 10rem;
   }
+
+  

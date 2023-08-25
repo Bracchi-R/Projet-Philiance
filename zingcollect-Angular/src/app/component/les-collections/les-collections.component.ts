@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { CollectionService } from 'src/app/services/collectionService/collection.service';
 import { Collection } from 'src/model/collection';
 
 
@@ -10,14 +11,26 @@ import { Collection } from 'src/model/collection';
 
 export class LesCollectionsComponent implements OnInit {
 
-  @Input() collection : Collection | undefined;
+  /* @Input() collection : Collection | undefined; */
 
-  constructor() {}
+  collections: Collection[] = []; // Tableau pour stocker les collections
+
+  constructor(private collectionService: CollectionService) {}
 
   ngOnInit(): void {
-      
+    this.loadCollections();
   }
 
+  loadCollections() {
+    this.collectionService.getAllCollection().subscribe(
+      (collections: Collection[]) => {
+        this.collections = collections;
+      },
+      (error) => {
+        console.error('Erreur lors du chargement des collections :', error);
+      }
+    );
+  }
   
 
 }
