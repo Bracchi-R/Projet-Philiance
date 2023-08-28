@@ -1,6 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CollectionService } from 'src/app/services/collectionService/collection.service';
+import { ObjetService } from 'src/app/services/objetService/objet.service';
 import { Collection } from 'src/model/collection';
 import { Objet } from 'src/model/objet';
 
@@ -13,8 +15,12 @@ export class MaCollectionComponent implements OnInit {
 
   selectedCollection: Collection | undefined;
   objectsOfSelectedCollection: Objet[] = [];
+  
 
-  constructor(private collectionService: CollectionService, private route:ActivatedRoute, private router: Router){}
+  constructor(private collectionService: CollectionService,
+     private route:ActivatedRoute,
+      private router: Router){}
+      
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
@@ -42,6 +48,8 @@ export class MaCollectionComponent implements OnInit {
     // Rediriger vers la route 'card-objet' en passant l'ID de l'objet dans les paramètres
     this.router.navigate(['/card-objet', objet.id]);
   }
+
+  
   
 
   

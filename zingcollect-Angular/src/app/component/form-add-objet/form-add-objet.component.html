@@ -17,17 +17,22 @@
 
   <div class="card bg-light">
     <article class="card-body mx-auto">
-      <h4 class="card-title mt-3 text-center">Ajoute un objet à ta Collection</h4>
-      
+      <h4 class="card-title mt-3 text-center">
+        Ajoute un objet à ta Collection
+      </h4>
+
       <p class="divider-text">
         <span class="bg-light"></span>
       </p>
-      <form>
+      <form [formGroup]="objetForm" (ngSubmit)="ajouterObjet()">
         <div class="form-group input-group">
           <div class="input-group-prepend">
-            <span class="input-group-text"> <i class="bi bi-arrow-right-circle"></i> </span>
+            <span class="input-group-text">
+              <i class="bi bi-arrow-right-circle"></i>
+            </span>
           </div>
           <input
+            formControlName="nom"
             name=""
             class="form-control"
             placeholder="Nom de l'objet"
@@ -35,79 +40,87 @@
           />
         </div>
         <div class="form-group input-group">
-            <div class="input-group-prepend">
-              <span class="input-group-text"> <i class="bi bi-image"></i> </span>
-            </div>
-            <input
-              name=""
-              class="form-control"
-              placeholder="URL image"
-              type="text"
-            />
+          <div class="input-group-prepend">
+            <span class="input-group-text"> <i class="bi bi-image"></i> </span>
           </div>
-          <div class="form-group input-group">
-            <div class="input-group-prepend">
-              <span class="input-group-text"> <i class="bi bi-arrow-right-circle"></i> </span>
-            </div>
-            <input
-              name=""
-              class="form-control"
-              placeholder="Marque de l'objet"
-              type="text"
-            />
-          </div>
-        <!-- form-group// -->
+          <input
+            formControlName="image"
+            name=""
+            class="form-control"
+            placeholder="URL image"
+            type="text"
+          />
+        </div>
         <div class="form-group input-group">
           <div class="input-group-prepend">
             <span class="input-group-text">
-                <i class="bi bi-card-text"></i>
+              <i class="bi bi-arrow-right-circle"></i>
             </span>
           </div>
-          <textarea name=""
-          class="form-control"
-          placeholder="Description"
-          type="text"></textarea>
-          
+          <input
+            formControlName="marque"
+            name=""
+            class="form-control"
+            placeholder="Marque de l'objet"
+            type="text"
+          />
+        </div>
+
+        <div class="form-group input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text">
+              <i class="bi bi-card-text"></i>
+            </span>
+          </div>
+          <textarea
+            formControlName="description"
+            name=""
+            class="form-control"
+            placeholder="Description"
+            type="text"
+          ></textarea>
         </div>
         <div class="form-group input-group">
-            <div class="input-group-prepend">
-              <span class="input-group-text"> <i class="bi bi-currency-euro"></i> </span>
-            </div>
-            <input
-              name=""
-              class="form-control"
-              placeholder="Prix de vente"
-              type="text"
-            />
+          <div class="input-group-prepend">
+            <span class="input-group-text">
+              <i class="bi bi-currency-euro"></i>
+            </span>
           </div>
-          
+          <input
+            formControlName="prix_vente"
+            name=""
+            class="form-control"
+            placeholder="Prix de vente"
+            type="text"
+          />
+        </div>
 
+        <div class="input-group form-group">
+          <label
+            class="input-group-text"
+            for="inputGroupSelect01"
+            >État</label
+          >
+          <select class="form-select" formControlName="etat_id" id="inputGroupSelect01">
+            <option selected>Choose...</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
 
-          <div class="input-group form-group">
-            <label class="input-group-text" for="inputGroupSelect01">État</label>
-            <select class="form-select" id="inputGroupSelect01">
-              <option selected>Choose...</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
-            </select>
-          </div>
-
-         
-        
-        <!-- form-group// -->
         <div class="form-group">
-          <button type="submit" class="btn btn-primary btn-block">
+          <button
+            type="submit"
+            (ngSubmit)="ajouterObjet()"
+            class="btn btn-primary btn-block"
+          >
             Ajouté
           </button>
         </div>
-        <!-- form-group// -->
-        
       </form>
     </article>
   </div>
-  <!-- card.// -->
 </div>
-<!--container end.//-->
 
 <br /><br />

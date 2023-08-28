@@ -27,6 +27,7 @@ import { BlockMesCollectionsComponent } from './component/block-mes-collections/
 import { TitreMesCollectionsComponent } from './component/titre-mes-collections/titre-mes-collections.component';
 import { ProfilComponent } from './component/profil/profil.component';
 import { AdminComponent } from './component/admin/admin.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,7 @@ import { AdminComponent } from './component/admin/admin.component';
     ProfilComponent,
     AdminComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule, ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

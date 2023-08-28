@@ -7,29 +7,29 @@
             <thead>
               <tr>
                 <th><span>Utilisateur</span></th>
-                <th class="text-center"><span>Role</span></th>
+                <th class="text-center"><span>Admin</span></th>
                 <th><span>Email</span></th>
                 <th>&nbsp;</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
+              <tr *ngFor="let user of users">
                 <td>
-                  <span>Mila Kunis</span>
+                  <span>{{user.nom}}, {{user.prenom}}</span>
                 </td>
-
+                
                 <td class="text-center">
-                  <span class="label label-default">admin</span>
+                  <span class="label label-default">{{user.admin}}</span>
                 </td>
                 <td>
-                  <span>mila@kunis.com</span>
+                  <span>{{user.mail}}</span>
                 </td>
                 <td style="width: 20%">
-                  <a href="" class="table-link danger">
+                  <button class="table-link danger" (click)="deleteUser(user.id)">
                     <span class="fa-stack">
                       <i class="bi bi-x-square-fill"></i>
                     </span>
-                  </a>
+                  </button>
                 </td>
               </tr>
             </tbody>
