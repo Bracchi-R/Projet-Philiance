@@ -2,6 +2,8 @@ package com.example.zingcollectspringboot.controller;
 
 import com.example.zingcollectspringboot.model.User;
 import com.example.zingcollectspringboot.service.UserService;
+import com.example.zingcollectspringboot.model.Objet;
+import com.example.zingcollectspringboot.service.ObjetService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,6 +14,9 @@ import java.util.List;
 public class UserController {
     @Autowired
     private UserService userService;
+    @Autowired
+    private ObjetService objetService;
+
 
     @PostMapping("/user/add")
     public User addUser(@RequestBody User user) {
