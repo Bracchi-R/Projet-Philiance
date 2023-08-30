@@ -1,17 +1,12 @@
-  
+.color {
+  background-color: rgb(243, 243, 98);
+}
 
-  
+img {
+  height: 100%;
+  width: 100%;
+}
 
-  .color {
-    background-color: rgb(243, 243, 98);
-  }
-
-  img {
-    height: 100%;
-    width: 100%;
-  }
-
-  .test {
-    margin-top: 3rem;
-  }
-  
+.test {
+  margin-top: 3rem;
+}

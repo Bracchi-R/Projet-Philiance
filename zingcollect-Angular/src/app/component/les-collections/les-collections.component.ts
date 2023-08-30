@@ -4,22 +4,20 @@ import { CollectionService } from 'src/app/services/collectionService/collection
 import { Collection } from 'src/model/collection';
 import { Objet } from 'src/model/objet';
 
-
 @Component({
   selector: 'app-les-collections',
   templateUrl: './les-collections.component.html',
-  styleUrls: ['./les-collections.component.css']
+  styleUrls: ['./les-collections.component.css'],
 })
-
 export class LesCollectionsComponent implements OnInit {
-
-  /* @Input() collection : Collection | undefined; */
-
   collections: Collection[] = []; // Tableau pour stocker les collections
-   selectedCollection: Collection | undefined;
-   objectsOfSelectedCollection: Objet[] = [];
+  selectedCollection: Collection | undefined;
+  objectsOfSelectedCollection: Objet[] = [];
 
-  constructor(private collectionService: CollectionService, private router : Router) {}
+  constructor(
+    private collectionService: CollectionService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     this.loadCollections();
@@ -45,8 +43,9 @@ export class LesCollectionsComponent implements OnInit {
   // Charger les objets de la collection sélectionnée
   loadObjectsOfSelectedCollection(): void {
     if (this.selectedCollection) {
-      this.collectionService.getObjectsForCollection(this.selectedCollection.id)
-        .subscribe(objets => {
+      this.collectionService
+        .getObjectsForCollection(this.selectedCollection.id)
+        .subscribe((objets) => {
           this.objectsOfSelectedCollection = objets;
         });
     }
@@ -55,7 +54,4 @@ export class LesCollectionsComponent implements OnInit {
   redirectToMaCollection(collectionId: number): void {
     this.router.navigate(['/ma-collection', collectionId]); // Redirige vers la route 'ma-collection' avec l'identifiant de la collection
   }
-
-  
-
 }

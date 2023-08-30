@@ -14,13 +14,13 @@ import { Objet } from 'src/model/objet';
 })
 export class FormAddObjetComponent {
   public objetForm: FormGroup;
-  public collectin : Collection | undefined;
+  public collection: Collection | undefined;
   public collectionId: number | undefined; // Déclaration de collectionId
   public listEtat: Array<Etat> = [];
 
   constructor(
     private objetService: ObjetService,
-    private collectionService : CollectionService,
+    private collectionService: CollectionService,
     private formBuilder: FormBuilder,
     private route: ActivatedRoute
   ) {
@@ -48,27 +48,26 @@ export class FormAddObjetComponent {
       },
     });
 
-    this.collectionService.getCollectionById(parseInt(collectionIdParam)).subscribe({
-      next: (data) => {
-        this.collectin = data;
-      },
-      error: (err) => {
-        console.error(err);
-      },
-    });
+    this.collectionService
+      .getCollectionById(parseInt(collectionIdParam))
+      .subscribe({
+        next: (data) => {
+          this.collection = data;
+        },
+        error: (err) => {
+          console.error(err);
+        },
+      });
   }
 
   ajouterObjet() {
     const objetData: Objet = this.objetForm.value;
-    objetData.collection = this.collectin!;
+    objetData.collection = this.collection!;
 
     if (this.collectionId !== undefined) {
-      //objetData.collection_id = this.collectionId; // Ajouter l'ID de la collection à l'objet
-      //objetData.prix_vente = parseFloat(objetData.prix_vente); // Convertir en nombre si nécessaire
-
       this.objetService.addObjet(objetData).subscribe({
         next: (data) => {
-          console.log(data)
+          console.log(data);
         },
         error: (err) => {
           console.error(err);

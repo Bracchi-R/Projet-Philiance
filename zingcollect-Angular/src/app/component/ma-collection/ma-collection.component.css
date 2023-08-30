@@ -1,20 +1,26 @@
+.divimg {
+  height: 20rem;
+  width: 100%;
+}
 
+.color {
+  background-color: rgb(243, 243, 98);
+}
 
+img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
 
-  .divimg {
-    height: 18rem;
-    width: 100%;
-  }
+h2 {
+  font-size: 1.2rem;
+}
 
-  .color {
-    background-color: rgb(243, 243, 98);
-  }
+.retour {
+  margin-bottom: 3rem;
+}
 
-  img {
-    height: 100%;
-    width: auto;
-  }
-
-  h2 {
-    font-size: 1.2rem;
-  }
+.titre {
+  padding-bottom: 0;
+}

@@ -3,16 +3,10 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-forum',
   templateUrl: './forum.component.html',
-  styleUrls: ['./forum.component.css']
+  styleUrls: ['./forum.component.css'],
 })
-export class ForumComponent implements OnInit{
+export class ForumComponent implements OnInit {
+  constructor() {}
 
-  constructor() {
-
-  }
-
-  ngOnInit(): void {
-      
-  }
-
+  ngOnInit(): void {}
 }

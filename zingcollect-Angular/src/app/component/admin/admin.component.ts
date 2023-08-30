@@ -5,7 +5,7 @@ import { User } from 'src/model/user';
 @Component({
   selector: 'app-admin',
   templateUrl: './admin.component.html',
-  styleUrls: ['./admin.component.css']
+  styleUrls: ['./admin.component.css'],
 })
 export class AdminComponent implements OnInit {
   users: User[] = [];
@@ -13,14 +13,13 @@ export class AdminComponent implements OnInit {
   constructor(private userService: UserService) {}
 
   ngOnInit(): void {
-    this.userService.getAllUser().subscribe(users => {
+    this.userService.getAllUser().subscribe((users) => {
       this.users = users;
     });
   }
 
-
   loadUsers(): void {
-    this.userService.getAllUser().subscribe(users => {
+    this.userService.getAllUser().subscribe((users) => {
       this.users = users;
     });
   }

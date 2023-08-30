@@ -9,21 +9,20 @@ import { Objet } from 'src/model/objet';
 @Component({
   selector: 'app-ma-collection',
   templateUrl: './ma-collection.component.html',
-  styleUrls: ['./ma-collection.component.css']
+  styleUrls: ['./ma-collection.component.css'],
 })
 export class MaCollectionComponent implements OnInit {
-
   selectedCollection: Collection | undefined;
   objectsOfSelectedCollection: Objet[] = [];
-  
 
-  constructor(private collectionService: CollectionService,
-     private route:ActivatedRoute,
-      private router: Router){}
-      
+  constructor(
+    private collectionService: CollectionService,
+    private route: ActivatedRoute,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
-    this.route.paramMap.subscribe(params => {
+    this.route.paramMap.subscribe((params) => {
       const collectionId = parseInt(params.get('collectionId') || '');
       if (collectionId) {
         this.loadCollectionAndObjects(collectionId);
@@ -32,25 +31,24 @@ export class MaCollectionComponent implements OnInit {
   }
 
   loadCollectionAndObjects(collectionId: number): void {
-    this.collectionService.getCollectionById(collectionId).subscribe(collection => {
-      this.selectedCollection = collection;
-      this.loadObjectsOfSelectedCollection(collectionId);
-    });
+    this.collectionService
+      .getCollectionById(collectionId)
+      .subscribe((collection) => {
+        this.selectedCollection = collection;
+        this.loadObjectsOfSelectedCollection(collectionId);
+      });
   }
 
   loadObjectsOfSelectedCollection(collectionId: number): void {
-    this.collectionService.getObjectsForCollection(collectionId).subscribe(objets => {
-      this.objectsOfSelectedCollection = objets;
-    });
+    this.collectionService
+      .getObjectsForCollection(collectionId)
+      .subscribe((objets) => {
+        this.objectsOfSelectedCollection = objets;
+      });
   }
 
   afficherInfos(objet: Objet): void {
     // Rediriger vers la route 'card-objet' en passant l'ID de l'objet dans les paramètres
     this.router.navigate(['/card-objet', objet.id]);
   }
-
-  
-  
-
-  
 }

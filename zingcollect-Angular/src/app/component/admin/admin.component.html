@@ -15,17 +15,20 @@
             <tbody>
               <tr *ngFor="let user of users">
                 <td>
-                  <span>{{user.nom}}, {{user.prenom}}</span>
+                  <span>{{ user.nom }}, {{ user.prenom }}</span>
                 </td>
-                
+
                 <td class="text-center">
-                  <span class="label label-default">{{user.admin}}</span>
+                  <span class="label label-default">{{ user.admin }}</span>
                 </td>
                 <td>
-                  <span>{{user.mail}}</span>
+                  <span>{{ user.mail }}</span>
                 </td>
                 <td style="width: 20%">
-                  <button class="table-link danger" (click)="deleteUser(user.id)">
+                  <button
+                    class="table-link danger"
+                    (click)="deleteUser(user.id)"
+                  >
                     <span class="fa-stack">
                       <i class="bi bi-x-square-fill"></i>
                     </span>

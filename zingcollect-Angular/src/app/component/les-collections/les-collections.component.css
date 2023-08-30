@@ -1,28 +1,26 @@
-  h2 {
-    font-size: 1.2rem;
-  }
+h2 {
+  font-size: 1.2rem;
+}
 
-  .scroll {
-    max-height: 10rem;
-    overflow-y: scroll;
-  }
+.scroll {
+  max-height: 10rem;
+  overflow-y: scroll;
+}
 
-  .divimg {
-    height: 15rem;
-    width: 100%;
-  }
+.divimg {
+  height: 15rem;
+  width: 100%;
+}
 
-  .color {
-    background-color: rgb(243, 243, 98);
-  }
+.color {
+  background-color: rgb(243, 243, 98);
+}
 
-  img {
-    height: 100%;
-    width: 100%;
-  }
+img {
+  height: 100%;
+  width: 100%;
+}
 
-  .desc {
-    height: 10rem;
-  }
-
-  
+.desc {
+  height: 10rem;
+}

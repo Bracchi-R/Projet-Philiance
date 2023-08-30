@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { ObjetService } from 'src/app/services/objetService/objet.service';
 import { Objet } from 'src/model/objet';
 import { User } from 'src/model/user';
@@ -16,8 +16,7 @@ export class CardObjetComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private objetService: ObjetService,
-    private router: Router
+    private objetService: ObjetService
   ) {}
 
   ngOnInit(): void {
@@ -28,7 +27,6 @@ export class CardObjetComponent implements OnInit {
       // Utiliser l'ID pour récupérer les détails de l'objet depuis le service
       this.objetService.getObjetById(objectId).subscribe((objet) => {
         this.selectedObject = objet;
-
       });
     });
   }

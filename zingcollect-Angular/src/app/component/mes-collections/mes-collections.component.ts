@@ -3,8 +3,6 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-mes-collections',
   templateUrl: './mes-collections.component.html',
-  styleUrls: ['./mes-collections.component.css']
+  styleUrls: ['./mes-collections.component.css'],
 })
-export class MesCollectionsComponent {
-
-}
+export class MesCollectionsComponent {}

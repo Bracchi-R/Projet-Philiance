@@ -1,27 +1,32 @@
-
 <div class="container px-4 px-lg-5">
-    <div class="row gx-4 gx-lg-5">
-      <div *ngFor="let objet of objectsOfSelectedCollection" class="col-md-4 mb-5">
-        <div class="card">
-          <div class="card-body">
-            <h2 class="card-title">{{objet.nom}}</h2>
-          </div>
-          <div class="divimg card-body">
-            <img class="rounded mx-auto d-block" src="{{objet.image}}" alt="">
-          </div>
-          
-            <div class="card-footer d-flex justify-content-between">
-              <button (click)="afficherInfos(objet)" class="color btn btn-sm" href="#!">Info</button>
-              <button class="color btn btn-sm" href="#!">Modifier</button>
-            </div>
-            
-          
+  <div class="row gx-4 gx-lg-5">
+    <div class="container retour">
+      <a class="lookbt color btn btn-sm" href="javascript:history.back()">Retour</a>
+    </div>
+    <div
+      *ngFor="let objet of objectsOfSelectedCollection"
+      class="col-md-4 mb-5"
+    >
+      <div class="card">
+        <div class="card-body titre">
+          <h2 class="card-title">{{ objet.nom }}</h2>
+        </div>
+        <div class="divimg card-body">
+          <img class="rounded mx-auto d-block" src="{{ objet.image }}" alt="" />
+        </div>
+
+        <div class="card-footer d-flex justify-content-between">
+          <button
+            (click)="afficherInfos(objet)"
+            class="color btn btn-sm"
+            href="#!"
+          >
+            Info
+          </button>
+          <button class="color btn btn-sm" href="#!">Modifier</button>
         </div>
       </div>
     </div>
   </div>
+</div>
 
-
-
-  
-  

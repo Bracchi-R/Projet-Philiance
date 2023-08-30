@@ -1,22 +1,27 @@
 <div class="container px-4 px-lg-5">
-  
   <!-- Content Row-->
   <div class="row gx-4 gx-lg-5">
     <div *ngFor="let collection of collections" class="col-md-4 mb-5">
       <div class="card">
         <div class="card-body">
-          <h2 class="card-title">{{collection.nom}}</h2>
+          <h2 class="card-title">{{ collection.nom }}</h2>
         </div>
         <div class="divimg card-body">
-          <img src="{{collection.image}}" alt="">
+          <img src="{{ collection.image }}" alt="" />
         </div>
         <div class="desc card-body scroll">
           <p class="card-text">
-            {{collection.description}}
+            {{ collection.description }}
           </p>
         </div>
         <div class="card-footer">
-          <button (click)="redirectToMaCollection(collection.id)" class="color btn btn-sm" href="#!">Info</button>
+          <button
+            (click)="redirectToMaCollection(collection.id)"
+            class="color btn btn-sm"
+            href="#!"
+          >
+            Info
+          </button>
         </div>
       </div>
     </div>

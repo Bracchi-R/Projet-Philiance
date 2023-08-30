@@ -17,23 +17,22 @@
   height: 100%;
   width: 100%;
 }
- .cont {
+.cont {
   font-size: 1.7rem;
   margin-left: 1rem;
- }
+}
 
- .cont a {
+.cont a {
   color: white;
- }
+}
 
- .marge {
+.marge {
   margin-right: 1rem;
   margin-bottom: 1rem;
- }
+}
 
 @media (max-width: 576px) {
   .sup {
     display: none;
   }
 }
-

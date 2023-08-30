@@ -7,20 +7,22 @@ import { Objet } from 'src/model/objet';
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
-  styleUrls: ['./main.component.css']
+  styleUrls: ['./main.component.css'],
 })
 export class MainComponent implements OnInit {
-
   collectionsAleatoires: Collection[] = [];
   selectedCollection: Collection | undefined;
   objectsOfSelectedCollection: Objet[] = [];
 
-  constructor(private collectionService: CollectionService, private router: Router) { }
+  constructor(
+    private collectionService: CollectionService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     this.loadRandomCollections();
   }
-    
+
   loadRandomCollections() {
     const nombre = 6; // Nombre de collections aléatoires que vous voulez charger
     this.collectionService.getRandomCollections(nombre).subscribe(
@@ -28,7 +30,10 @@ export class MainComponent implements OnInit {
         this.collectionsAleatoires = collections;
       },
       (error) => {
-        console.log('Erreur lors du chargement des collections aléatoires:', error);
+        console.log(
+          'Erreur lors du chargement des collections aléatoires:',
+          error
+        );
       }
     );
   }
@@ -42,29 +47,15 @@ export class MainComponent implements OnInit {
   // Charger les objets de la collection sélectionnée
   loadObjectsOfSelectedCollection(): void {
     if (this.selectedCollection) {
-      this.collectionService.getObjectsForCollection(this.selectedCollection.id)
-        .subscribe(objets => {
+      this.collectionService
+        .getObjectsForCollection(this.selectedCollection.id)
+        .subscribe((objets) => {
           this.objectsOfSelectedCollection = objets;
         });
     }
   }
 
-
   redirectToMaCollection(collectionId: number): void {
     this.router.navigate(['/ma-collection', collectionId]); // Redirige vers la route 'ma-collection' avec l'identifiant de la collection
   }
-
-
-
-
-  }
-
- 
-
-
-
-
-
-
-
-
+}
