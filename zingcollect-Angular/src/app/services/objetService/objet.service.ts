@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, switchMap, tap } from 'rxjs';
 import { Collection } from 'src/model/collection';
+import { Etat } from 'src/model/etat';
 import { Objet } from 'src/model/objet';
 import { User } from 'src/model/user';
 
@@ -19,7 +20,11 @@ export class ObjetService {
   }
 
   public  getAllObjet():Observable<Array<Objet>>{
-    return this.http.get<Array<Objet>>(this.baseURL = "/objets/all")
+    return this.http.get<Array<Objet>>(this.baseURL + "/objets/all")
+  }
+
+  public  getAllEtat():Observable<Array<Etat>>{
+    return this.http.get<Array<Etat>>(this.baseURL + "/etat/all")
   }
 
   public getObjetById(idObjet : number): Observable<Objet> {

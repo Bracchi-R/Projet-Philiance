@@ -1,12 +1,14 @@
+import { Collection } from "./collection";
+import { Etat } from "./etat";
 
 
 export interface Objet{
     id : number;
-    collection_id : number;
+    collection : Collection;
     nom : string;
     image : string;
     marque : string | null;
     description : string | null;
-    prix_vente : number;
-    etat_id : number | null;
+    prixVente : number;
+    etat : Etat;
 }

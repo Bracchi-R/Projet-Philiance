@@ -1,6 +1,8 @@
 package com.example.zingcollectspringboot.controller;
 
+import com.example.zingcollectspringboot.model.Etat;
 import com.example.zingcollectspringboot.model.Objet;
+import com.example.zingcollectspringboot.service.EtatService;
 import com.example.zingcollectspringboot.service.ObjetService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -14,6 +16,8 @@ import java.util.List;
 public class ObjetControler {
     @Autowired
     private ObjetService objetService;
+    @Autowired
+    private EtatService etatService;
 
     @PostMapping("/objet/add")
     public Objet addObjet(@RequestBody Objet objet) {
@@ -23,6 +27,11 @@ public class ObjetControler {
     @GetMapping("/objets/all")
     public List<Objet> getAllObjets() {
         return this.objetService.getAll();
+    }
+
+    @GetMapping("/etat/all")
+    public List<Etat> getAllEtat() {
+        return this.etatService.getAll();
     }
 
     @GetMapping("/objet/{idObjet}")

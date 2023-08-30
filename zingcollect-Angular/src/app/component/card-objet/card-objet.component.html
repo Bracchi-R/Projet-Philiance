@@ -8,7 +8,7 @@
           </div>
           <div class="card-body">
             <p class="card-text">
-              L'objet est dans un état : {{ selectedObject.etat_id }}. <br />{{
+              L'objet est dans un état : {{ selectedObject.etat.nom }}. <br />{{
                 selectedObject.description
               }}
             </p>
@@ -16,7 +16,7 @@
         </div>
         <div class="card-footer d-flex justify-content-around">
           <button class="color btn btn-sm" href="#!">
-            {{ selectedObject.prix_vente}}
+            {{ selectedObject.prixVente}}
           </button>
           <a class="color btn btn-sm" href="javascript:history.back()">Retour</a>
         </div>
