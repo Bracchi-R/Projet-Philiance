@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
 import { UserService } from 'src/app/services/userService/user.service';
 import { User } from 'src/model/user';
 
@@ -9,38 +10,16 @@ import { User } from 'src/model/user';
   styleUrls: ['./inscription.component.css'],
 })
 export class InscriptionComponent {
-  newUser: User = {
-    id: 0,
-    admin: false,
-    nom: '',
-    prenom: '',
-    tel: null,
-    mail: '',
-    mdp: '',
-  };
+  public userForm: FormGroup | undefined;
+  public user: User | undefined;
 
   constructor(
     private userService: UserService,
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private route: ActivatedRoute
   ) {}
 
-  addUser() {
-    this.userService.addUser(this.newUser).subscribe(
-      (response) => {
-        console.log('Utilisateur ajouté avec succès :', response);
-        this.newUser = {
-          id: 0,
-          admin: false,
-          nom: '',
-          prenom: '',
-          tel: null,
-          mail: '',
-          mdp: '',
-        };
-      },
-      (error) => {
-        console.error("Erreur lors de l'ajout de l'utilisateur :", error);
-      }
-    );
-  }
+
+  
+ 
 }
