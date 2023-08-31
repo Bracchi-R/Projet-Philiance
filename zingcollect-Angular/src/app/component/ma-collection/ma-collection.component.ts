@@ -18,7 +18,8 @@ export class MaCollectionComponent implements OnInit {
   constructor(
     private collectionService: CollectionService,
     private route: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private objetService : ObjetService,
   ) {}
 
   ngOnInit(): void {
@@ -51,4 +52,17 @@ export class MaCollectionComponent implements OnInit {
     // Rediriger vers la route 'card-objet' en passant l'ID de l'objet dans les paramètres
     this.router.navigate(['/card-objet', objet.id]);
   }
+
+
+
+  deleteObjet(objetId: number): void {
+    if (confirm('Êtes-vous sûr de vouloir supprimer cet objet ?')) {
+      this.objetService.deleteObjet(objetId).subscribe(() => {
+        window.location.reload();
+        
+      });
+    }
+  }
+
+
 }
