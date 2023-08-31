@@ -50,4 +50,10 @@ public class ObjetControler {
         return new ResponseEntity<>(objets, HttpStatus.OK);
     }
 
+    @PutMapping("/objet/update")
+    public ResponseEntity<Objet> updateObjet(@RequestBody Objet updatedObjet) {
+        Objet updated = objetService.save(updatedObjet); // Utilisez le service pour mettre à jour l'objet
+        return new ResponseEntity<>(updated, HttpStatus.OK);
+    }
+
 }

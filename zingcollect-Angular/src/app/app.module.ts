@@ -28,6 +28,7 @@ import { TitreMesCollectionsComponent } from './component/titre-mes-collections/
 import { ProfilComponent } from './component/profil/profil.component';
 import { AdminComponent } from './component/admin/admin.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ObjetEditComponent } from './objet-edit/objet-edit.component';
 
 @NgModule({
   declarations: [
@@ -55,6 +56,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     TitreMesCollectionsComponent,
     ProfilComponent,
     AdminComponent,
+    ObjetEditComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule, ReactiveFormsModule],
   providers: [],

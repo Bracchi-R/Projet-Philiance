@@ -38,4 +38,9 @@ export class ObjetService {
   public getObjetsForCollection(collectionId : number): Observable<Array<Objet>> {
     return this.http.get<Array<Objet>>(this.baseURL + "collection/${collectionId}/objets");
   }
+
+  public updateObjet(objet: Objet): Observable<Objet> {
+    return this.http.put<Objet>(`${this.baseURL}/objet/update`, objet);
+  }
+
 }

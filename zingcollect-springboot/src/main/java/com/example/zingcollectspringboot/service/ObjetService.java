@@ -35,4 +35,5 @@ public class ObjetService {
     public List<Objet> getObjetsForCollection(Integer collectionId) {
         return objetRepository.findByCollectionId(collectionId);
     }
+
 }

@@ -14,6 +14,7 @@ import { BlockMaCollectionComponent } from './component/block-ma-collection/bloc
 import { BlockMesCollectionsComponent } from './component/block-mes-collections/block-mes-collections.component';
 import { ProfilComponent } from './component/profil/profil.component';
 import { AdminComponent } from './component/admin/admin.component';
+import { ObjetEditComponent } from './objet-edit/objet-edit.component';
 
 const routes: Routes = [
   { path: '', component: MainComponent},
@@ -26,6 +27,7 @@ const routes: Routes = [
   { path: 'contact', component: ContactComponent},
   { path: 'form-collection', component: FormAddCollectionComponent},
   { path: 'form-objet', component: FormAddObjetComponent},
+  { path: 'objet/:id/modifier', component: ObjetEditComponent },
   { path: 'info-vendeur', component: InfoVendeurComponent},
   { path: 'les-collections' ,component: BlockLesCollectionComponent},
   { path: 'ma-collection/:collectionId', component: BlockMaCollectionComponent },

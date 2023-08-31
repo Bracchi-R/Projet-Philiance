@@ -23,7 +23,10 @@
           >
             Info
           </button>
-          <button class="color btn btn-sm">Modifier</button>
+          
+
+<button class="color btn btn-sm" [routerLink]="['/objet', objet.id, 'modifier']">Modifier</button>
+
           <button class="color btn btn-sm" (click)="deleteObjet(objet.id)">
                     <span class="fa-stack">
                       <i class="bi bi-trash3-fill"></i>

@@ -1,0 +1,118 @@
+
+
+
+  <link
+  href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+  rel="stylesheet"
+  id="bootstrap-css"
+/>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<link
+  rel="stylesheet"
+  href="https://use.fontawesome.com/releases/v5.0.8/css/all.css"
+/>
+
+<div class="container">
+  <br />
+
+  <div class="card bg-light">
+    <article class="card-body mx-auto">
+      <h4 class="card-title mt-3 text-center">
+        Modifier l'objet
+      </h4>
+
+      <p class="divider-text">
+        <span class="bg-light"></span>
+      </p>
+      <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+        <div class="form-group input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text">
+              <i class="bi bi-arrow-right-circle"></i>
+            </span>
+          </div>
+          <input
+            formControlName="nom"
+            name=""
+            class="form-control"
+            placeholder="Nom de l'objet"
+            type="text"
+          />
+        </div>
+        <div class="form-group input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text"> <i class="bi bi-image"></i> </span>
+          </div>
+          <input
+            formControlName="image"
+            name=""
+            class="form-control"
+            placeholder="URL image"
+            type="text"
+          />
+        </div>
+        <div class="form-group input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text">
+              <i class="bi bi-arrow-right-circle"></i>
+            </span>
+          </div>
+          <input
+            formControlName="marque"
+            name=""
+            class="form-control"
+            placeholder="Marque de l'objet"
+            type="text"
+          />
+        </div>
+
+        <div class="form-group input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text">
+              <i class="bi bi-card-text"></i>
+            </span>
+          </div>
+          <textarea
+            formControlName="description"
+            name=""
+            class="form-control"
+            placeholder="Description"
+            type="text"
+          ></textarea>
+        </div>
+        <div class="form-group input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text">
+              <i class="bi bi-currency-euro"></i>
+            </span>
+          </div>
+          <input
+            formControlName="prixVente"
+            name=""
+            class="form-control"
+            placeholder="Prix de vente"
+            type="text"
+          />
+        </div>
+
+        
+
+        <div class="form-group">
+          <button
+            type="submit"
+            class="btn lookbt btn-block"
+            Onclick="javascript:history.back()"
+          >
+            Modifier
+          </button>
+        </div>
+      </form>
+    </article>
+  </div>
+</div>
+
+<br /><br />
+  
