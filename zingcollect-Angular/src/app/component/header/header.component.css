@@ -1,5 +1,5 @@
 .blocDesc {
-  background-color: rgb(243, 243, 98, 0.5);
+  background-color: rgb(243, 243, 98, 0.9);
 }
 
 .desc {
@@ -31,8 +31,20 @@
   margin-bottom: 1rem;
 }
 
+.margin {
+  margin-right: 1rem;
+}
+
+.conte {
+  background-color: rgb(243, 243, 98);
+  color: black;
+}
 @media (max-width: 576px) {
   .sup {
     display: none;
+  }
+
+  .margin {
+    margin-bottom: 1rem;
   }
 }

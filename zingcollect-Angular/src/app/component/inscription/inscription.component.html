@@ -17,14 +17,14 @@
 
   <div class="card bg-light">
     <article class="card-body mx-auto">
-      <h4 class="card-title mt-3 text-center">Crée un compte</h4>
-      <p class="text-center">Commencez avec votre compte gratuit</p>
+      <h4 class="card-title mt-3 text-center">Créer un compte</h4>
+      <p class="text-center">Et tout ça, c'est gratuit !</p>
       <p>
-        <a class="btn btn-block btn-twitter">
-          <i class="fab fa-twitter"></i>   Connection via Twitter</a
+        <a class="btn btn-block btn-twitter text-white">
+          <i class="fab fa-twitter"></i>   Connexion via Twitter</a
         >
-        <a class="btn btn-block btn-facebook">
-          <i class="fab fa-facebook-f"></i>   Connection via facebook</a
+        <a class="btn btn-block btn-facebook text-white">
+          <i class="fab fa-facebook-f"></i>   Connexion via Facebook</a
         >
       </p>
       <p class="divider-text">
@@ -51,7 +51,7 @@
             formControlName="prenom"
             name=""
             class="form-control"
-            placeholder="Prenom"
+            placeholder="Prénom"
             type="text"
           />
         </div>
@@ -89,7 +89,7 @@
           <input
             formControlName="mdp"
             class="form-control"
-            placeholder="Crée password"
+            placeholder="Mot de passe"
             type="password"
           />
         </div>
@@ -106,13 +106,13 @@
         </div> -->
 
         <div class="form-group">
-          <button (ngSubmit)="ajouterUser()" type="submit" class="cree btn btn-primary btn-block">
-            Crée
+          <button (ngSubmit)="ajouterUser()" type="submit" class="cree btn btn-block">
+            Valider
           </button>
         </div>
         <p class="text-center">
-          Si vous avez un compte
-          <a routerLink="connection" href="#">Connection</a>
+          Si vous avez un compte,
+          <a routerLink="connection" href="#">connectez-vous ici</a>
         </p>
       </form>
     </article>
